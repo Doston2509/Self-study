@@ -86,6 +86,12 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
     }
+    public void moveCheckBox(View view){
+        startActivity(new Intent(MainActivity.this, CheckBoxing.class));
+    }
+    public void moveToggle(View view){
+        startActivity(new Intent(MainActivity.this, ToggleAndSwitch.class));
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

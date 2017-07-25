@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.idoston.self_study.CheckBoxing"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to CheckBoxes"
+        android:textAlignment="center"
+        android:textAppearance="?android:textAppearanceLarge"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:text="@string/program_java"
+        android:textStyle="italic"
+        android:id="@+id/program_java"
+        />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/program_cpp"
+        android:textStyle="italic"
+        android:id="@+id/program_cpp"
+        />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/program_javascript"
+        android:textStyle="italic"
+        android:id="@+id/program_js"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/program_php"
+        android:textStyle="italic"
+        android:id="@+id/program_php"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:layout_margin="20sp"
+        android:onClick="finalSelection"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show result"
+        android:textAlignment="center"
+        android:id="@+id/showResult"/>
+
+
+</LinearLayout>

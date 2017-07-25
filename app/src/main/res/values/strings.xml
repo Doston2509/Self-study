@@ -1,8 +1,14 @@
 <resources>
-    <string name="app_name">All app in One</string>
+    <string name="app_name">Self-study</string>
+    <string name="welcome">Welcome to my app</string>
     <string name="action_settings">Settings</string>
     <string name="action_contactus">Contact Us</string>
     <string name="action_aboutus">About Us</string>
     <string name="title_activity_seeking_bar">Seek Bar</string>
     <string name="title_activity_list_viewing">ListView</string>
+
+    <string name="program_java">Java</string>
+    <string name="program_cpp">C++</string>
+    <string name="program_javascript">JavaScript</string>
+    <string name="program_php">PHP</string>
 </resources>
