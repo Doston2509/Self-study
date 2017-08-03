@@ -73,11 +73,38 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".ToggleAndSwitch"
+        <activity
+            android:name=".ToggleAndSwitch"
             android:label="Toggle and Switch"
             android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="com.idoston.self_study.ToggleAndSwitch" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".OptionMenu">
+            android:label="Toggle and Switch"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="com.idoston.self_study.OptionMenu" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".PopUp">
+            android:label="Toggle and Switch"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="com.idoston.self_study.PopUp" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

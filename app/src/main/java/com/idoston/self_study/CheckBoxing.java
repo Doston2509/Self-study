@@ -39,6 +39,9 @@ public class CheckBoxing extends AppCompatActivity {
         myActionBar.setDisplayUseLogoEnabled(true);
         myActionBar.setDisplayShowHomeEnabled(true);
         myActionBar.setLogo(R.drawable.ic_phone_android_black_24dp);
+
+        //To enable "add up button in actionBar" 'back button'
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
     public void finalSelection(View view){
@@ -59,7 +62,7 @@ public class CheckBoxing extends AppCompatActivity {
 
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.activity_main_action, menu);
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        //getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 

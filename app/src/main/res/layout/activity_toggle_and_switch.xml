@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.idoston.self_study.ToggleAndSwitch"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true">
 
     <TextView
         android:layout_width="match_parent"
@@ -42,6 +43,29 @@
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
         android:textAppearance="?android:textAppearance"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_spinner"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="40sp"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="?android:textAppearance"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select country"
+        android:textAppearance="?android:textAppearance"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner">
+
+    </Spinner>
 
 </LinearLayout>

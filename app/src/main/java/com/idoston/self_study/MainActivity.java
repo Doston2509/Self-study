@@ -92,15 +92,22 @@ public class MainActivity extends AppCompatActivity {
     public void moveToggle(View view){
         startActivity(new Intent(MainActivity.this, ToggleAndSwitch.class));
     }
+    public void moveOption(View view){
+        startActivity(new Intent(MainActivity.this, OptionMenu.class));
+    }
+    public void movePopUp(View view){
+        startActivity(new Intent(MainActivity.this, PopUp.class));
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.activity_main_action, menu);
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        //getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

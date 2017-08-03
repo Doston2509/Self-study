@@ -1,5 +1,6 @@
 package com.idoston.self_study;
 
+import android.net.wifi.aware.Characteristics;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +9,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +22,9 @@ public class ToggleAndSwitch extends AppCompatActivity {
 
     TextView result_text;
     Switch switching;
+
+    Spinner spinner;
+    ArrayAdapter<CharSequence> adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +56,32 @@ public class ToggleAndSwitch extends AppCompatActivity {
         myActionBar.setDisplayUseLogoEnabled(true);
         myActionBar.setDisplayShowHomeEnabled(true);
         myActionBar.setLogo(R.drawable.ic_phone_android_black_24dp);
+
+        //To enable "add up button in actionBar" 'back button'
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+
+        //Spinner
+        spinner = (Spinner)findViewById(R.id.spinner);
+        adapter = ArrayAdapter.createFromResource(this,
+                R.array.country_names, android.R.layout.simple_spinner_item);
+
+        adapter.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(
+                new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+                        Toast.makeText(getBaseContext(), adapterView.getItemAtPosition(position) + " selected",
+                                Toast.LENGTH_LONG).show();
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+                        Toast.makeText(ToggleAndSwitch.this, "Please, select country!!!", Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
     }
     public void changeVibrateState(View view){
 
@@ -67,7 +100,7 @@ public class ToggleAndSwitch extends AppCompatActivity {
 
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.activity_main_action, menu);
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        //getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
